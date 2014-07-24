@@ -1,4 +1,4 @@
-﻿insert into system.setting(name, vl, active, description) values('title-plan-gridcut-srid', 26332, true, 'The srid of the grid cut used in the title plan map');
+﻿insert into system.setting(name, vl, active, description) values('title-plan-gridcut-srid', 26331, true, 'The srid of the grid cut used in the title plan map');
 insert into system.setting(name, vl, active, description) values('surveyor', 'John Smith', true, 'Name of Surveyor');
 insert into system.setting(name, vl, active, description) values('surveyorRank', 'Surveyor', true, 'The rank of the Surveyor');
 
@@ -42,7 +42,7 @@ update system.config_map_layer_metadata set  value = 'true' where "name" = 'in-p
 update system.config_map_layer_metadata set  value = 'false' where "name" = 'in-plan-production' and  name_layer not in ('orthophoto','parcels-for-parcel-plan','road-centerlines-for-parcel-plan');
 
 
-
+DROP VIEW application.systematic_registration_certificates;
 
 
 CREATE OR REPLACE VIEW application.systematic_registration_certificates AS 
