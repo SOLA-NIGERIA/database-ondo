@@ -84,7 +84,7 @@ CREATE INDEX spatial_unit_group_name_ind ON spatial_unit_group USING btree (name
 
 CREATE TRIGGER __track_changes BEFORE INSERT OR UPDATE ON spatial_unit_group FOR EACH ROW EXECUTE PROCEDURE public.f_for_trg_track_changes();
 
-ALTER TABLE spatial_unit_group DISABLE TRIGGER __track_changes;
+--ALTER TABLE spatial_unit_group DISABLE TRIGGER __track_changes;
 
 
 --
@@ -94,7 +94,7 @@ ALTER TABLE spatial_unit_group DISABLE TRIGGER __track_changes;
 
 CREATE TRIGGER __track_history AFTER DELETE OR UPDATE ON spatial_unit_group FOR EACH ROW EXECUTE PROCEDURE public.f_for_trg_track_history();
 
-ALTER TABLE spatial_unit_group DISABLE TRIGGER __track_history;
+--ALTER TABLE spatial_unit_group DISABLE TRIGGER __track_history;
 
 
 --
@@ -104,7 +104,7 @@ ALTER TABLE spatial_unit_group DISABLE TRIGGER __track_history;
 
 CREATE TRIGGER add_srwu AFTER INSERT ON spatial_unit_group FOR EACH ROW EXECUTE PROCEDURE f_for_tbl_spatial_unit_group_trg_new();
 
-ALTER TABLE spatial_unit_group DISABLE TRIGGER add_srwu;
+--ALTER TABLE spatial_unit_group DISABLE TRIGGER add_srwu;
 
 
 --
@@ -114,7 +114,7 @@ ALTER TABLE spatial_unit_group DISABLE TRIGGER add_srwu;
 
 CREATE TRIGGER trg_geommodify AFTER INSERT OR UPDATE OF geom ON spatial_unit_group FOR EACH ROW EXECUTE PROCEDURE f_for_tbl_spatial_unit_group_trg_geommodify();
 
-ALTER TABLE spatial_unit_group DISABLE TRIGGER trg_geommodify;
+--ALTER TABLE spatial_unit_group DISABLE TRIGGER trg_geommodify;
 
 
 --
